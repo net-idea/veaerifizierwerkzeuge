@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Datenschutzerklärung – VEA Aerifizierwerkzeuge{% endblock %}
+{% block meta_description %}Datenschutzerklärung der VEA – Verifizierte Aerifizierwerkzeuge für Sportrasen gemäß DSGVO Art. 13.{% endblock %}
+
+{% block body %}
+<div class="legal-page">
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="{{ path('home') }}">Startseite</a> &rsaquo; Datenschutzerklärung
+        </nav>
+
+        <h1>Datenschutzerklärung</h1>
+
+        <div class="legal-content">
+
+            <div class="todo-note">
+                {# TODO: Vollständige Datenschutzerklärung gemäß DSGVO Art. 13 erstellen #}
+                ⚠️ <strong>TODO:</strong> Diese Datenschutzerklärung ist ein Platzhalter-Gerüst.
+                Bitte alle TODO-Abschnitte gemäß DSGVO Art. 13 und den tatsächlich eingesetzten
+                Diensten vervollständigen. Empfehlung: Einen Datenschutzbeauftragten oder Rechtsanwalt
+                hinzuziehen.
+            </div>
+
+            <h2>1. Verantwortlicher</h2>
+            {# TODO: DSGVO Art. 13 Abs. 1 lit. a – Name und Kontaktdaten des Verantwortlichen #}
+            <div class="todo-note">
+                ⚠️ <strong>TODO (DSGVO Art. 13 Abs. 1 lit. a):</strong> Name, Anschrift und Kontaktdaten
+                des Verantwortlichen eintragen.
+            </div>
+            <p>
+                VEA – Verifizierte Aerifizierwerkzeuge für Sportrasen<br>
+                [Straße], [PLZ Ort]<br>
+                E-Mail: <a href="mailto:{{ app_contact.email }}">{{ app_contact.email }}</a>
+            </p>
+
+            <h2>2. Datenschutzbeauftragter</h2>
+            {# TODO: DSGVO Art. 13 Abs. 1 lit. b – Kontaktdaten des Datenschutzbeauftragten (falls bestellt) #}
+            <div class="todo-note">
+                ⚠️ <strong>TODO (DSGVO Art. 13 Abs. 1 lit. b):</strong> Falls ein Datenschutzbeauftragter
+                bestellt ist, dessen Kontaktdaten angeben. Andernfalls diesen Abschnitt entfernen.
+            </div>
+
+            <h2>3. Zwecke und Rechtsgrundlagen der Verarbeitung</h2>
+            {# TODO: DSGVO Art. 13 Abs. 1 lit. c/d – Zwecke und Rechtsgrundlagen #}
+            <div class="todo-note">
+                ⚠️ <strong>TODO (DSGVO Art. 13 Abs. 1 lit. c/d):</strong> Alle Verarbeitungszwecke
+                und die jeweiligen Rechtsgrundlagen (Art. 6 DSGVO) beschreiben.
+            </div>
+            <p>Wir verarbeiten personenbezogene Daten zu folgenden Zwecken:</p>
+            <ul>
+                <li>Bereitstellung und Betrieb dieser Website (Art. 6 Abs. 1 lit. f DSGVO)</li>
+                {# TODO: Weitere Zwecke ergänzen, z. B. Kontaktanfragen, Newsletter, etc. #}
+            </ul>
+
+            <h2>4. Server-Logfiles</h2>
+            <p>
+                Beim Aufruf dieser Website werden durch den Webhoster automatisch Informationen
+                in Server-Logfiles gespeichert. Dazu gehören: IP-Adresse, Datum/Uhrzeit des
+                Zugriffs, aufgerufene URL, Browsertyp und Betriebssystem.
+            </p>
+            {# TODO: Aufbewahrungsdauer und konkreten Hoster angeben #}
+            <div class="todo-note">
+                ⚠️ <strong>TODO:</strong> Namen und Kontaktdaten des Webhosters sowie
+                Aufbewahrungsdauer der Logfiles angeben.
+            </div>
+
+            <h2>5. Cookies</h2>
+            <p>
+                Diese Website verwendet ausschließlich technisch notwendige Cookies (z. B. zur
+                Speicherung Ihrer Cookie-Hinweis-Bestätigung via localStorage).
+                Es werden keine Tracking- oder Marketing-Cookies eingesetzt.
+            </p>
+
+            <h2>6. Ihre Rechte</h2>
+            {# TODO: DSGVO Art. 13 Abs. 2 – Betroffenenrechte #}
+            <p>Sie haben gemäß DSGVO folgende Rechte:</p>
+            <ul>
+                <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+                <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+                <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+                <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+                <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+                <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+                <li>Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+            </ul>
+
+            <h2>7. Beschwerderecht</h2>
+            <p>
+                Sie haben das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde
+                zu beschweren.
+                {# TODO: Zuständige Aufsichtsbehörde je nach Bundesland eintragen #}
+            </p>
+            <div class="todo-note">
+                ⚠️ <strong>TODO:</strong> Zuständige Datenschutzaufsichtsbehörde des jeweiligen
+                Bundeslandes mit vollständiger Adresse und Website-Link eintragen.
+            </div>
+
+            <p><em>Stand: {{ "now"|date("d.m.Y") }}</em></p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,207 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VEA – Verifizierte Aerifizierwerkzeuge für Sportrasen | Startseite{% endblock %}
+{% block meta_description %}Professionelle Aerifizierwerkzeuge für Sportrasen: handverlesene Spoons, Conispoon®-Modelle, Langlebigkeits-Reihen und Handaerifizierer – kontinuierlich geprüft.{% endblock %}
+
+{% block body %}
+
+{# ===== 1. Hero ===== #}
+<section id="hero" class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+        <p class="hero__eyebrow">Sportrasen-Profis vertrauen uns</p>
+        <h1 id="hero-heading" class="hero__title">
+            Verifizierte Aerifizierwerkzeuge für Sportrasen
+        </h1>
+        <p class="hero__subtitle">
+            Jedes Werkzeug durchläuft unseren strengen Qualitäts- und Verifikationsprozess –
+            für maximale Standzeit und perfekte Ergebnisse auf Ihrem Grün.
+        </p>
+        <a href="#sortiment" class="hero__cta">Sortiment entdecken</a>
+    </div>
+</section>
+
+{# ===== 2. Über uns ===== #}
+<section id="ueber-uns" aria-labelledby="about-heading">
+    <div class="container">
+        <h2 id="about-heading" class="section-title">Über VEA</h2>
+        <p class="section-lead">
+            Wir sind Spezialist für Aerifizierwerkzeuge im professionellen Sportrasen-Bereich.
+        </p>
+        <div class="about__content">
+            <div class="about__text">
+                <p>
+                    VEA – Verifizierte Aerifizierwerkzeuge für Sportrasen steht für kompromisslose
+                    Qualität bei der Belüftung und Pflege hochwertiger Rasenflächen. Unser Team
+                    vereint jahrzehntelange Erfahrung in der Entwicklung und Prüfung von
+                    Aerifizierwerkzeugen für Golfplätze, Fußballstadien und professionelle
+                    Sportanlagen.
+                </p>
+                <p>
+                    Jedes Werkzeug, das unsere Marke trägt, wurde nach strengen, intern
+                    definierten Kriterien geprüft und verifiziert. Nur wer alle Anforderungen
+                    an Materialqualität, Ergonomie und Langlebigkeit erfüllt, erhält das
+                    VEA-Gütesiegel.
+                </p>
+                <span class="about__badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    Intern geprüft &amp; verifiziert
+                </span>
+            </div>
+            <div class="about__visual" aria-hidden="true">
+                <img src="{{ asset('images/spoon.svg') }}" alt="Aerifizierwerkzeug Illustration" width="180" height="180" style="margin-inline: auto; opacity: 0.7;">
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ===== 3. Sortiment ===== #}
+<section id="sortiment" aria-labelledby="products-heading">
+    <div class="container">
+        <h2 id="products-heading" class="section-title">Unser Sortiment</h2>
+        <p class="section-lead">
+            Vier spezialisierte Produktkategorien – entwickelt für den anspruchsvollen Einsatz
+            auf Sportrasenflächen.
+        </p>
+        <div class="products__grid">
+
+            <article class="product-card" aria-label="Handverlesene, gehärtete Spoons">
+                <img class="product-card__icon" src="{{ asset('images/spoon.svg') }}" alt="" aria-hidden="true" width="56" height="56">
+                <h3 class="product-card__title">Handverlesene, gehärtete Spoons</h3>
+                <p class="product-card__text">
+                    Präzisionswerkzeuge aus gehärtetem Stahl – einzeln ausgewählt und auf
+                    Maßhaltigkeit geprüft. Ideal für intensive Nutzung auf stark beanspruchten
+                    Sportflächen.
+                </p>
+            </article>
+
+            <article class="product-card" aria-label="Conispoon®-Modelle">
+                <img class="product-card__icon" src="{{ asset('images/conispoon.svg') }}" alt="" aria-hidden="true" width="56" height="56">
+                <h3 class="product-card__title">Conispoon®-Modelle</h3>
+                <p class="product-card__text">
+                    Unsere patentierte Conispoon®-Geometrie sorgt für optimale Bodenöffnung
+                    bei minimalem Oberflächenabtrag – schonend für das Spielfeld,
+                    effektiv für die Wurzelbelüftung.
+                </p>
+            </article>
+
+            <article class="product-card" aria-label="Langlebigkeits-Reihen">
+                <img class="product-card__icon" src="{{ asset('images/langlebigkeit.svg') }}" alt="" aria-hidden="true" width="56" height="56">
+                <h3 class="product-card__title">Langlebigkeits-Reihen</h3>
+                <p class="product-card__text">
+                    Durch spezielle Oberflächenbehandlung erreichen diese Werkzeuge eine
+                    deutlich verlängerte Standzeit. Ideal für Betreiber, die auf minimale
+                    Betriebskosten setzen.
+                </p>
+            </article>
+
+            <article class="product-card" aria-label="Handaerifizierer">
+                <img class="product-card__icon" src="{{ asset('images/handaerifizierer.svg') }}" alt="" aria-hidden="true" width="56" height="56">
+                <h3 class="product-card__title">Handaerifizierer</h3>
+                <p class="product-card__text">
+                    Präzise Handwerkzeuge für gezielte Aerifizierung und
+                    Nachbearbeitung – besonders geeignet für Abschläge, Greens und
+                    schwer zugängliche Randbereiche.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+{# ===== 4. Qualitätsversprechen ===== #}
+<section id="qualitaet" aria-labelledby="quality-heading">
+    <div class="container">
+        <h2 id="quality-heading" class="section-title">Unser Qualitätsversprechen</h2>
+        <p class="section-lead">
+            Kontinuierliche Prüfung statt einmaliger Zertifizierung – das ist der VEA-Anspruch.
+        </p>
+        <div class="quality__steps">
+            <div class="quality-step">
+                <span class="quality-step__number" aria-hidden="true">1</span>
+                <div class="quality-step__content">
+                    <strong>Materialprüfung</strong>
+                    <p>Jede Legierung wird auf Härte, Korrosionsbeständigkeit und Maßhaltigkeit geprüft, bevor die Fertigung beginnt.</p>
+                </div>
+            </div>
+            <div class="quality-step">
+                <span class="quality-step__number" aria-hidden="true">2</span>
+                <div class="quality-step__content">
+                    <strong>Fertigungskontrolle</strong>
+                    <p>Während der Produktion überwacht unser Qualitätsteam Toleranzen und Oberflächenqualität in mehreren Zwischenschritten.</p>
+                </div>
+            </div>
+            <div class="quality-step">
+                <span class="quality-step__number" aria-hidden="true">3</span>
+                <div class="quality-step__content">
+                    <strong>Praxistest</strong>
+                    <p>Ausgewählte Chargen werden unter realen Bedingungen auf verschiedenen Rasentypen getestet und ausgewertet.</p>
+                </div>
+            </div>
+            <div class="quality-step">
+                <span class="quality-step__number" aria-hidden="true">4</span>
+                <div class="quality-step__content">
+                    <strong>Kontinuierliche Überwachung</strong>
+                    <p>Rückmeldungen aus dem Feld fließen direkt in den Verifikationsprozess ein – wir lernen kontinuierlich dazu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ===== 5. Kontakt ===== #}
+{#<section id="kontakt" aria-labelledby="contact-heading">
+    <div class="container">
+        <h2 id="contact-heading" class="section-title">Kontakt</h2>
+        <p class="section-lead">
+            Sie haben Fragen zu unseren Produkten oder möchten ein Angebot?
+            Sprechen Sie uns an.
+        </p>
+        <div class="contact__grid">
+
+            <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="contact-item__label">E-Mail</p>
+                    <p class="contact-item__value">
+                        <a href="mailto:{{ app_contact.email }}">{{ app_contact.email }}</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.08 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="contact-item__label">Telefon</p>
+                    <p class="contact-item__value">
+                        <a href="tel:{{ app_contact.phone|replace({' ': ''}) }}">{{ app_contact.phone }}</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="contact-item__label">Adresse</p>
+                    <p class="contact-item__value">{{ app_contact.address }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>#}
+
+{% endblock %}

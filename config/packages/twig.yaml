@@ -1,0 +1,11 @@
+twig:
+    file_name_pattern: '*.twig'
+    globals:
+        app_contact:
+            email: '%env(CONTACT_EMAIL)%'
+            phone: '%env(CONTACT_PHONE)%'
+            address: '%env(CONTACT_ADDRESS)%'
+
+when@test:
+    twig:
+        strict_variables: true
