@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    {# SEO: Titel und Meta-Description #}
+    <title>{% block title %}VEA – Verifizierte Aerifizierwerkzeuge für Sportrasen{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Professionelle Aerifizierwerkzeuge für Sportrasen – handverlesen, geprüft und zertifiziert. Spoons, Conispoon®-Modelle und mehr.{% endblock %}">
+
+    {# Open Graph #}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VEA Aerifizierwerkzeuge">
+    <meta property="og:title" content="{% block og_title %}VEA – Verifizierte Aerifizierwerkzeuge für Sportrasen{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Professionelle Aerifizierwerkzeuge – kontinuierlich geprüft für maximale Standzeit.{% endblock %}">
+    <meta property="og:url" content="{{ app.request.uri }}">
+
+    {# Canonical URL #}
+    <link rel="canonical" href="{{ app.request.uri }}">
+
+    {# Assets #}
+    {{ importmap('app') }}
+</head>
+<body>
+
+{# ===== Header / Navigation ===== #}
+<header class="site-header" role="banner">
+    <div class="container">
+        <a href="{{ path('home') }}" class="site-logo" aria-label="VEA Startseite">
+            <img src="{{ asset('images/logo.svg') }}" alt="VEA Logo" width="36" height="36">
+            <span>VEA Aerifizierwerkzeuge</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Navigation öffnen">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+        </button>
+
+        <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="{{ path('home') }}#hero">Start</a></li>
+                <li><a href="{{ path('home') }}#ueber-uns">Über uns</a></li>
+                <li><a href="{{ path('home') }}#sortiment">Sortiment</a></li>
+                <li><a href="{{ path('home') }}#qualitaet">Qualität</a></li>
+                <li><a href="{{ path('home') }}#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+{# ===== Hauptinhalt ===== #}
+<main id="main-content" role="main">
+    {% block body %}{% endblock %}
+</main>
+
+{# ===== Footer ===== #}
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <p>&copy; {{ "now"|date("Y") }} VEA – Verifizierte Aerifizierwerkzeuge für Sportrasen</p>
+        <nav class="footer-links" aria-label="Rechtliche Links">
+            <a href="{{ path('impressum') }}">Impressum</a>
+            <a href="{{ path('datenschutz') }}">Datenschutzerklärung</a>
+        </nav>
+    </div>
+</footer>
+
+{# ===== Cookie-Hinweis ===== #}
+<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie-Hinweis" aria-live="polite">
+    <p class="cookie-banner__text">
+        Diese Website verwendet ausschließlich technisch notwendige Cookies.
+        Es werden keine Tracking- oder Marketing-Cookies eingesetzt.
+        Weitere Informationen finden Sie in unserer
+        <a href="{{ path('datenschutz') }}">Datenschutzerklärung</a>.
+    </p>
+    <div class="cookie-banner__actions">
+        <button class="btn btn--primary" id="cookieAccept" type="button">Verstanden</button>
+    </div>
+</div>
+
+<script>
+(function () {
+    // Cookie-Banner: rein funktional, kein Tracking
+    var banner = document.getElementById('cookieBanner');
+    var btn    = document.getElementById('cookieAccept');
+    var toggle = document.getElementById('navToggle');
+    var nav    = document.getElementById('mainNav');
+
+    // Cookie-Banner ausblenden, falls bereits akzeptiert
+    if (localStorage.getItem('cookieNoticeAccepted') === '1') {
+        banner.hidden = true;
+    }
+
+    btn.addEventListener('click', function () {
+        localStorage.setItem('cookieNoticeAccepted', '1');
+        banner.hidden = true;
+    });
+
+    // Hamburger-Menü
+    toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+}());
+</script>
+
+</body>
+</html>
